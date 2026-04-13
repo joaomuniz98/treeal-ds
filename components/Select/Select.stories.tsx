@@ -14,6 +14,7 @@ const options = [
 const STATES: SelectState[] = ['Default', 'Disabled', 'Error'];
 
 const meta: Meta<typeof Select> = {
+  title: 'Formulários/Select',
   component: Select,
   argTypes: {
     state: { control: 'select', options: STATES },

@@ -46,6 +46,7 @@ const ALL_ICONS = Object.values(ICON_CATALOG).flat();
 // ─── Meta ─────────────────────────────────────────────────────────────────────
 
 const meta: Meta<typeof Icon> = {
+  title: 'Fundamentos/Ícones',
   component: Icon,
   argTypes: {
     name:   { control: 'text',         description: 'Nome do ícone Material Symbols (ex: "search", "home")' },

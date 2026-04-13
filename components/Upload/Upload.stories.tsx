@@ -12,6 +12,7 @@ const makeFile = (overrides: Partial<UploadFile> & Pick<UploadFile, 'id'>): Uplo
 });
 
 const meta: Meta<typeof Upload> = {
+  title: 'Formulários/Upload',
   component: Upload,
   argTypes: {
     size:   { control: 'inline-radio', options: ['MD', 'LG'] },

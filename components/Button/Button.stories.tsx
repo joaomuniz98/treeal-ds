@@ -9,6 +9,7 @@ const Icon = () => (
 );
 
 const meta: Meta<typeof Button> = {
+  title: 'Componentes/Botões',
   component: Button,
   argTypes: {
     variant: {

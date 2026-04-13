@@ -10,6 +10,7 @@ const items = [
 ];
 
 const meta: Meta<typeof Tab> = {
+  title: 'Componentes/Tabs',
   component: Tab,
   argTypes: {
     items:    { control: false },

@@ -5,7 +5,7 @@ export default create({
 
   // ── Brand ────────────────────────────────────────────────────────────────
   brandTitle: 'Treeal DS',
-  brandImage: '/assets/logo-treeal-light.png',
+  brandImage: 'https://joaomuniz98.github.io/treeal-ds/assets/logo-treeal-light.png',
   brandUrl:   'https://figma.com/design/VekfomfsZU4q2iaY1j4VXP',
   brandTarget: '_blank',
 

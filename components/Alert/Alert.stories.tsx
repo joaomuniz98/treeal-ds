@@ -7,6 +7,7 @@ const MSG = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiu
 const TYPES: AlertType[] = ['Default', 'Info', 'Success', 'Warning', 'Error'];
 
 const meta: Meta<typeof Alert> = {
+  title: 'Componentes/Alertas',
   component: Alert,
   argTypes: {
     type:        { control: 'select', options: TYPES },

@@ -4,6 +4,7 @@ import { Input } from './Input';
 import type { InputState, InputType } from './Input';
 
 const meta: Meta<typeof Input> = {
+  title: 'Formulários/Input',
   component: Input,
   argTypes: {
     inputType: {
