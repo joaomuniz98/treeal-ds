@@ -1,0 +1,323 @@
+/**
+ * Upload styles — values from Figma node FileUpload (3210:3538)
+ * Font: Inter · Regular · 12px/10px · lh 1.6
+ */
+
+/* ─── Drop zone ──────────────────────────────────────────────────────────── */
+
+.dropzone {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border: 1px dashed #D0D5DD;   /* Gray/300 — default border */
+  border-radius: 8px;           /* rounded-[8px] from Figma */
+  background: #FFFFFF;
+  overflow: hidden;
+  cursor: pointer;
+  box-sizing: border-box;
+  transition: background 0.15s ease, border-color 0.15s ease, border-style 0.15s ease;
+}
+
+/* MD — horizontal, p-[16px], gap-[16px] */
+.dropzoneMd {
+  flex-direction: row;
+  gap: 16px;
+  padding: 16px;
+}
+
+/* LG — vertical, centered, h-[165px], p-[24px], gap-[12px] */
+.dropzoneLg {
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+  height: 165px;     /* h-[165px] from Figma */
+  padding: 24px;     /* p-[24px] from Figma */
+}
+
+/* Hover / drag-over state */
+.dropzone:hover,
+.dropzoneDragging {
+  background: #DBE8FF;           /* Primary/100 */
+  border-color: #2970FF;         /* Primary/500 */
+  border-style: solid;
+}
+
+/* ─── Drop zone — icon illustration ─────────────────────────────────────── */
+
+/* MD: 32×32 file icon wrapper */
+.dropzoneIconMd {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  position: relative;
+}
+
+/* LG: 96×64 stacked files illustration */
+.dropzoneIconLg {
+  width: 96px;
+  height: 64px;
+  flex-shrink: 0;
+  position: relative;
+  filter: drop-shadow(0px 8px 8px rgba(0, 0, 0, 0.03))
+          drop-shadow(0px 20px 24px rgba(0, 0, 0, 0.08));
+}
+
+/* ─── Drop zone — text content ───────────────────────────────────────────── */
+
+.dropzoneContent {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;          /* gap-[4px] from Figma */
+  flex: 1 0 0;
+  min-width: 0;
+}
+
+/* LG content is centered */
+.dropzoneLg .dropzoneContent {
+  align-items: center;
+  flex: unset;
+}
+
+.dropzoneTitleRow {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.dropzoneTitle {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 12px;       /* Paragraph/SM/Regular */
+  line-height: 1.6;
+  letter-spacing: 0;
+  color: #101828;        /* Gray/900 */
+  white-space: nowrap;
+  margin: 0;
+}
+
+.dropzoneBrowse {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.6;
+  letter-spacing: 0;
+  color: #154FEF;        /* Primary/600 */
+  white-space: nowrap;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.dropzoneSubtitle {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 10px;       /* Paragraph/XS/Regular */
+  line-height: 1.6;
+  letter-spacing: 0;
+  color: #667085;        /* Gray/500 */
+  white-space: nowrap;
+  margin: 0;
+  width: 100%;
+}
+
+/* ─── File list ──────────────────────────────────────────────────────────── */
+
+.fileList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;          /* gap-[8px] from Figma */
+  width: 100%;
+}
+
+/* ─── File item — base ───────────────────────────────────────────────────── */
+
+.fileItem {
+  display: flex;
+  gap: 16px;         /* gap-[16px] from Figma */
+  padding: 16px;     /* p-[16px] from Figma */
+  background: #FFFFFF;
+  border: 1px solid #EAECF0;   /* Gray/200 */
+  border-radius: 8px;           /* rounded-[8px] from Figma */
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* LG items: align top (progress bar below name) */
+.fileItemLg {
+  align-items: flex-start;
+}
+
+/* MD items: vertically centered (no progress bar) */
+.fileItemMd {
+  align-items: center;
+}
+
+/* ─── File badge (icon ring) ─────────────────────────────────────────────── */
+
+.fileBadge {
+  width: 32px;                   /* size-[32px] from Figma */
+  height: 32px;
+  flex-shrink: 0;
+  background: #B2C9FF;           /* Primary/200 */
+  border: 4px solid #DBE8FF;     /* Primary/100 · border-4 from Figma */
+  border-radius: 999px;          /* rounded-[999px] from Figma */
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ─── File info ──────────────────────────────────────────────────────────── */
+
+.fileContent {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1 0 0;
+  min-width: 0;
+  min-height: 1px;
+  justify-content: center;
+}
+
+.fileHeader {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;         /* gap-[12px] from Figma */
+  width: 100%;
+}
+
+.fileTexts {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1 0 0;
+  min-width: 0;
+  justify-content: center;
+}
+
+.fileName {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 12px;   /* Paragraph/SM/Regular */
+  line-height: 1.6;
+  letter-spacing: 0;
+  color: #101828;    /* Gray/900 */
+  margin: 0;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.fileSize {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 10px;   /* Paragraph/XS/Regular */
+  line-height: 1.6;
+  letter-spacing: 0;
+  color: #667085;    /* Gray/500 */
+  margin: 0;
+  width: 100%;
+}
+
+/* ─── Action buttons ─────────────────────────────────────────────────────── */
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 4px;          /* gap-[4px] from Figma */
+  flex-shrink: 0;
+}
+
+.actionBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;       /* size-[24px] from Figma */
+  height: 24px;
+  background: #FFFFFF;
+  border: 1px solid #EAECF0;   /* Gray/200 */
+  border-radius: 4px;           /* rounded-[4px] from Figma */
+  overflow: hidden;
+  cursor: pointer;
+  padding: 0;
+  flex-shrink: 0;
+  color: #475467;               /* Gray/600 */
+  transition: background 0.1s ease;
+}
+
+.actionBtn:hover {
+  background: #F8FAFC;
+}
+
+/* ─── Progress bar ───────────────────────────────────────────────────────── */
+
+.progressRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;          /* gap-[8px] from Figma */
+  width: 100%;
+  flex-shrink: 0;
+}
+
+.progressTrack {
+  flex: 1 0 0;
+  height: 4px;       /* h-[4px] from Figma */
+  background: #EAECF0;          /* Gray/200 */
+  border-radius: 999px;         /* rounded-[999px] from Figma */
+  min-width: 1px;
+  overflow: hidden;
+  position: relative;
+}
+
+.progressFill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  border-radius: 999px;
+  /* Figma gradient: linear-gradient(1.53deg, #2970FF 0.2%, #0040C1 99.99%) */
+  background: linear-gradient(to right, #2970FF, #0040C1);
+  transition: width 0.3s ease;
+}
+
+.progressLabel {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.6;
+  color: #101828;    /* Gray/900 */
+  white-space: nowrap;
+  flex-shrink: 0;
+  margin: 0;
+}
+
+/* ─── Spinner (loading indicator) ───────────────────────────────────────── */
+
+.spinner {
+  width: 24px;       /* size-[24px] from Figma */
+  height: 24px;
+  flex-shrink: 0;
+  border: 2px solid #DBE8FF;    /* Primary/100 — track */
+  border-top-color: #2970FF;    /* Primary/500 — active arc */
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ─── Wrapper (drop zone + file list) ───────────────────────────────────── */
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;         /* gap-[12px] from Figma (between dropzone and items) */
+  align-items: flex-start;
+  width: 100%;
+}

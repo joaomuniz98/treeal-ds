@@ -1,0 +1,127 @@
+/**
+ * Pagination styles — values from Figma node Pagination (3203:662)
+ * Font: Roboto · Regular · fontVariationSettings: 'wdth' 100
+ * Active:  bg #0F6C13 · text white
+ * Inactive: border #CED4DA · text #101113
+ * Sizes:  xs=20px · md=32px · lg=40px
+ */
+
+/* ─── Wrapper ────────────────────────────────────────────────────────────── */
+
+.pagination {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;         /* gap-[8px] from Figma */
+  flex-wrap: wrap;
+}
+
+/* ─── Base item (shared by all — button reset included) ──────────────────── */
+
+.item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border-radius: 4px;     /* rounded-[4px] from Figma */
+  overflow: hidden;
+
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-variation-settings: "'wdth' 100";   /* Figma fontVariationSettings */
+  letter-spacing: 0;
+  text-align: center;
+  white-space: nowrap;
+  line-height: 1;
+
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  user-select: none;
+  box-sizing: border-box;
+
+  transition: background 0.12s ease, opacity 0.12s ease;
+}
+
+.item:focus-visible {
+  outline: 2px solid #0F6C13;
+  outline-offset: 1px;
+}
+
+/* ─── Sizes ──────────────────────────────────────────────────────────────── */
+
+/* xs — 20×20, font 12px, lh 14px */
+.xs {
+  width: 20px;
+  height: 20px;
+  font-size: 12px;
+  line-height: 14px;
+}
+
+/* md — 32×32, font 16px, lh 18px */
+.md {
+  width: 32px;
+  height: 32px;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+/* lg — 40×40, font 18px, lh 20px */
+.lg {
+  width: 40px;
+  height: 40px;
+  font-size: 18px;
+  line-height: 20px;
+}
+
+/* ─── Variants ───────────────────────────────────────────────────────────── */
+
+/* Active page — bg #0F6C13, text white */
+.active {
+  background: #0F6C13;    /* Brand/Secondary/Base */
+  color: #FFFFFF;
+  cursor: default;
+}
+
+/* Inactive page number — border #CED4DA, text #101113 */
+.inactive {
+  border: 1px solid #CED4DA;   /* Gray/Gray 4 */
+  color: #101113;               /* Dark/Dark 9 */
+}
+
+.inactive:hover {
+  background: rgba(206, 212, 218, 0.2);
+}
+
+.inactive:active {
+  background: rgba(206, 212, 218, 0.35);
+}
+
+/* Dots (ellipsis) — no border, no bg */
+.dots {
+  color: #101113;
+  cursor: default;
+  border: none;
+  background: transparent;
+}
+
+/* Control buttons (prev, next, first, last) — border #CED4DA */
+.control {
+  border: 1px solid #CED4DA;
+  color: #101113;
+}
+
+.control:hover {
+  background: rgba(206, 212, 218, 0.2);
+}
+
+.control:active {
+  background: rgba(206, 212, 218, 0.35);
+}
+
+.control:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  pointer-events: none;
+}

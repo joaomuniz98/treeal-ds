@@ -1,0 +1,21 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "declaration":         true,
+    "declarationDir":      "dist",
+    "declarationMap":      true,
+    "emitDeclarationOnly": true,
+    "noEmit":              false
+  },
+  "include": ["css-modules.d.ts", "components/**/*", "tokens/**/*"],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "**/*.stories.tsx",
+    "**/*.stories.ts",
+    "**/*.stories.mdx",
+    ".storybook",
+    "components/Tokens",
+    "components/Introduction.mdx"
+  ]
+}

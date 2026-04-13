@@ -1,0 +1,125 @@
+/* ─── Wrapper ────────────────────────────────────────────────────────────── */
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+  width: 100%;
+}
+
+/* ─── Label ──────────────────────────────────────────────────────────────── */
+
+.label {
+  flex: 1 0 0;
+  font-family: 'Clash Grotesk', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.43;
+  letter-spacing: 0;
+  color: #203224;
+}
+
+.labelDisabled {
+  color: #524E69;
+}
+
+/* ─── Field wrapper ──────────────────────────────────────────────────────── */
+
+.field {
+  position: relative;
+  width: 100%;
+}
+
+/* ─── Native select ──────────────────────────────────────────────────────── */
+
+.select {
+  display: block;
+  width: 100%;
+  padding: 12px 40px 12px 12px;
+
+  font-family: 'Clash Grotesk', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.3;
+  letter-spacing: 0;
+  color: #524E69;
+
+  background: #FFFFFF;
+  border-radius: 6px;
+  border: 1px solid #DCE5DE;
+  box-sizing: border-box;
+
+  appearance: none;
+  cursor: pointer;
+  outline: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.select:hover:not(:disabled) {
+  border-color: #9490AC;
+}
+
+.select:focus {
+  border-color: #9490AC;
+  box-shadow: 0 0 0 2px #EFEEF2;
+}
+
+.select:disabled {
+  background: #EFEEF2;
+  border-color: #DCE5DE;
+  color: #524E69;
+  cursor: not-allowed;
+}
+
+.select.placeholder {
+  color: #9490AC;
+}
+
+/* ─── Error state ────────────────────────────────────────────────────────── */
+
+.error .select {
+  border-color: #FF3A29;
+}
+
+.error .select:hover,
+.error .select:focus {
+  border-color: #FF3A29;
+  box-shadow: none;
+}
+
+/* ─── Chevron icon ───────────────────────────────────────────────────────── */
+
+.chevron {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  color: #9490AC;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ─── Message ────────────────────────────────────────────────────────────── */
+
+.message {
+  display: flex;
+  align-items: flex-start;
+  gap: 4px;
+  width: 100%;
+
+  font-family: 'Clash Grotesk', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.3;
+  letter-spacing: 0;
+  color: #524E69;
+}
+
+.messageError {
+  color: #FF3A29;
+}

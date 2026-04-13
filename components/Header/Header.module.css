@@ -1,0 +1,312 @@
+/**
+ * Header (topBar) styles — Figma node 3576:994
+ *
+ * Variants:
+ *   Default    → 1064px desktop bar, height 64px, bg white, border-bottom
+ *   Mobile     → 399px mobile bar,  height 64px, bg white, border-bottom
+ *   MobileOpen → mobile bar expanded with CTA + workspace + user (flex-col)
+ *
+ * Colors / tokens:
+ *   bg             #FFFFFF
+ *   border-bottom  #DCE5DE
+ *   page title     #524E69  Clash Display Variable Semibold 21px (desktop) / 18px (mobile)
+ *   workspace bg   #F3F3F3  (Grayscale/10)
+ *   account label  #524E69  Semibold 10px
+ *   workspace name #203224  Semibold 14px
+ *   user name      #203224  Semibold 14px  lh 1.43
+ *   user role      #524E69  Semibold 10px  lh 1.3
+ *   status dot     #5BA980  (Message Colors/Success/Base)
+ *   CTA bg         #E7DA10  (Brand/Tertiary/Base)
+ *   CTA text       #203224  (Brand/Primary/Base)
+ */
+
+/* ─── Root ───────────────────────────────────────────────────────────────── */
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  padding: 8px 16px;
+  background: #FFFFFF;
+  border-bottom: 1px solid #DCE5DE;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.variantDefault { height: 64px; }
+.variantMobile  { height: 64px; }
+.variantMobileOpen {
+  flex-direction: column;
+  align-items: flex-start;
+  height: auto;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  gap: 16px;
+}
+
+/* ─── Page title ─────────────────────────────────────────────────────────── */
+
+.pageTitle {
+  flex: 1 0 0;
+  font-family: 'Clash Display Variable', sans-serif;
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: 0;
+  color: #524E69;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 0;
+}
+
+.pageTitleDesktop { font-size: 21px; }
+.pageTitleMobile  { font-size: 18px; }
+
+/* ─── Actions container ──────────────────────────────────────────────────── */
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-shrink: 0;
+  height: 100%;
+}
+
+.actionsMobileOpen {
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  height: auto;
+  gap: 16px;
+}
+
+/* ─── Workspace switcher ─────────────────────────────────────────────────── */
+
+.workspace {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #F3F3F3;
+  border-radius: 6px;
+  padding: 0 12px;
+  height: 100%;
+  cursor: pointer;
+  border: none;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  transition: background 0.15s ease;
+}
+
+.workspace:hover { background: #EBEBEB; }
+
+/* Full-width version for MobileOpen */
+.workspaceFull {
+  width: 100%;
+  height: 48px;
+  flex: 1 0 0;
+}
+
+.workspaceLeft {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex: 1 0 0;
+  min-width: 0;
+}
+
+.statusDot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #5BA980;
+  flex-shrink: 0;
+}
+
+.workspaceCol {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  min-width: 0;
+}
+
+.workspaceAccount {
+  font-family: 'Clash Grotesk', sans-serif;
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 1.3;
+  color: #524E69;
+  white-space: nowrap;
+  margin: 0;
+}
+
+.workspaceName {
+  font-family: 'Clash Grotesk', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.3;
+  color: #203224;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+}
+
+.workspaceArrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  color: #524E69;
+}
+
+/* ─── Bell / notification button ─────────────────────────────────────────── */
+
+.bellBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  color: #524E69;
+  flex-shrink: 0;
+  transition: background 0.15s ease;
+}
+
+.bellBtn:hover { background: rgba(0, 0, 0, 0.06); }
+
+/* ─── Menu button (Mobile) ───────────────────────────────────────────────── */
+
+.menuBtn {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 12px 16px;
+  background: transparent;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: 'Clash Grotesk', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.3;
+  color: #203224;
+  flex-shrink: 0;
+  transition: background 0.15s ease;
+}
+
+.menuBtn:hover { background: rgba(0, 0, 0, 0.05); }
+
+.menuIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+/* ─── User info ──────────────────────────────────────────────────────────── */
+
+.navUser {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+  height: 36px;
+}
+
+.avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #0F6C13;
+  flex-shrink: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatarImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  pointer-events: none;
+  display: block;
+}
+
+.avatarInitials {
+  font-family: 'Clash Grotesk', sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  color: #FFFFFF;
+}
+
+.userText {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  white-space: nowrap;
+}
+
+.userName {
+  font-family: 'Clash Grotesk', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.43;
+  color: #203224;
+  margin: 0;
+}
+
+.userRole {
+  font-family: 'Clash Grotesk', sans-serif;
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 1.3;
+  color: #524E69;
+  margin: 0;
+}
+
+/* ─── MobileOpen: CTA button ─────────────────────────────────────────────── */
+
+.ctaBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 36px;
+  padding: 6px 12px;
+  background: #E7DA10;
+  border: none;
+  border-radius: 12px;
+  font-family: 'Clash Grotesk', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #203224;
+  cursor: pointer;
+  box-sizing: border-box;
+  transition: opacity 0.15s ease;
+}
+
+.ctaBtn:hover  { opacity: 0.88; }
+.ctaBtn:active { opacity: 0.75; }
+
+/* ─── MobileOpen: main actions row (workspace + user) ────────────────────── */
+
+.mainActions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+}

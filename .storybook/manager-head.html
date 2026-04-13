@@ -1,0 +1,44 @@
+<!-- Clash Grotesk no chrome do Storybook (sidebar, toolbar, painel) -->
+<link rel="preconnect" href="https://api.fontshare.com" crossorigin />
+<link
+  href="https://api.fontshare.com/v2/css?f[]=clash-grotesk@400,500,600,700&display=swap"
+  rel="stylesheet"
+/>
+
+<style>
+  /* ── Sidebar: itens de story e componente ─────────────────────────────── */
+  #storybook-explorer-tree a,
+  #storybook-explorer-tree button {
+    font-family: 'Clash Grotesk', sans-serif !important;
+    font-size: 14px !important;
+    line-height: 1.4 !important;
+    padding-top: 7px !important;
+    padding-bottom: 7px !important;
+  }
+
+  /* ── Cabeçalhos de grupo (Fundação, Formulários, Componentes) ─────────── */
+  #storybook-explorer-tree [data-nodetype="group"] > button,
+  #storybook-explorer-tree [data-nodetype="root"] > button {
+    font-family: 'Clash Grotesk', sans-serif !important;
+    font-size: 13px !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.06em !important;
+    text-transform: uppercase !important;
+    padding-top: 14px !important;
+    padding-bottom: 6px !important;
+    opacity: 1 !important;
+    color: #9490AC !important;
+  }
+
+  /* ── Input de busca ───────────────────────────────────────────────────── */
+  #storybook-explorer-searchfield {
+    font-family: 'Clash Grotesk', sans-serif !important;
+    font-size: 14px !important;
+    height: 36px !important;
+  }
+
+  /* ── Logo / brand area ────────────────────────────────────────────────── */
+  #storybook-explorer-tree {
+    padding-top: 4px !important;
+  }
+</style>

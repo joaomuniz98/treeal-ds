@@ -1,0 +1,160 @@
+/**
+ * BaseCheckRadio styles — values from Figma node (3106:4752)
+ * Check/Radio: 20×20 · Toggle: 36×20
+ * Shadow/sm: 0 1px 2px #1018280F, 0 1px 3px #1018281A
+ */
+
+/* ─── Native input hidden visually, present for assistive tech & forms ──── */
+
+.nativeInput {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  margin: 0;
+  pointer-events: none;
+}
+
+/* ─── Disabled ────────────────────────────────────────────────────────────── */
+
+.inputDisabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.toggleDisabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+/* ─── Check & Radio ──────────────────────────────────────────────────────── */
+
+.base {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.toggleWrapper {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  cursor: pointer;
+}
+
+/* Default: white bg, #DCE5DE border */
+.checkDefault,
+.radioDefault {
+  width: 20px;
+  height: 20px;
+  background: #FFFFFF;             /* Default Colors/White */
+  border: 1px solid #DCE5DE;       /* Default Colors/Border */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.checkDefault {
+  border-radius: 4px;              /* rounded-[4px] from Figma */
+}
+
+.radioDefault {
+  border-radius: 100px;            /* rounded-[100px] from Figma */
+}
+
+/* Checked: #E7DA10 bg, #203224 border, Shadow/sm */
+.checkChecked,
+.radioChecked {
+  width: 20px;
+  height: 20px;
+  background: #E7DA10;             /* Brand/Tertiary/Base — amarelo Treeal */
+  border: 1px solid #203224;       /* Brand/Primary/Base — verde escuro */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  cursor: pointer;
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.06), 0 1px 3px rgba(16, 24, 40, 0.10);
+}
+
+.checkChecked {
+  border-radius: 4px;
+}
+
+.radioChecked {
+  border-radius: 100px;
+}
+
+/* ─── Checkmark icon (12×12 SVG) ────────────────────────────────────────── */
+
+.checkIcon {
+  width: 12px;
+  height: 12px;
+  display: block;
+  flex-shrink: 0;
+}
+
+/* ─── Radio dot (12×12, pure CSS) ────────────────────────────────────────── */
+
+.radioIcon {
+  width: 12px;
+  height: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.radioIcon::after {
+  content: '';
+  display: block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #203224;             /* Brand/Primary/Base — contraste no fundo amarelo */
+}
+
+/* ─── Toggle ─────────────────────────────────────────────────────────────── */
+
+/* Toggle track — 36×20 pill */
+.toggleTrack {
+  position: relative;
+  width: 36px;    /* w-[36px] from Figma */
+  height: 20px;   /* h-[20px] from Figma */
+  border-radius: 100px;
+  background: #9490AC;             /* Default Colors/Text medium — off state */
+  border: 1px solid #DCE5DE;
+  box-sizing: border-box;
+  transition: background 0.2s ease, border-color 0.2s ease;
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.06), 0 1px 3px rgba(16, 24, 40, 0.10);
+}
+
+/* Toggle thumb */
+.toggleTrack::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  transition: transform 0.2s ease;
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.06);
+}
+
+/* Checked state */
+.toggleChecked .toggleTrack {
+  background: #E7DA10;             /* Brand/Tertiary/Base — amarelo Treeal */
+  border-color: #203224;           /* Brand/Primary/Base — verde escuro */
+}
+
+.toggleChecked .toggleTrack::after {
+  transform: translateX(16px);     /* moves thumb to right side */
+}

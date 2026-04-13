@@ -1,0 +1,100 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Treeal DS" />
+
+<div style={{
+  background: '#203224',
+  borderRadius: 12,
+  padding: '48px 40px',
+  marginBottom: 40,
+  display: 'flex',
+  flexDirection: 'column',
+  gap: 16,
+}}>
+  <img src="/assets/logo-treeal.png" alt="Treeal" style={{ height: 36, width: 'auto', objectFit: 'contain', objectPosition: 'left' }} />
+  <p style={{ color: '#E7DA10', fontSize: 13, fontWeight: 600, margin: 0, letterSpacing: 2, textTransform: 'uppercase' }}>Design System</p>
+  <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: 15, margin: 0, maxWidth: 520, lineHeight: 1.6 }}>
+    Biblioteca de componentes React + TypeScript da Treeal. Extraída diretamente do Figma, com tokens de design, CSS Modules e acessibilidade integrada.
+  </p>
+</div>
+
+## Cores
+
+<div style={{ display: 'flex', flexWrap: 'wrap', gap: 12, marginBottom: 40 }}>
+  {[
+    { name: 'Primary', hex: '#203224', label: 'Brand / Primary' },
+    { name: 'Secondary', hex: '#0F6C13', label: 'Brand / Secondary' },
+    { name: 'Tertiary', hex: '#E7DA10', label: 'Brand / Tertiary' },
+    { name: 'Text Dark', hex: '#524E69', label: 'Default / Text Dark' },
+    { name: 'Text Medium', hex: '#9490AC', label: 'Default / Text Medium' },
+    { name: 'Border', hex: '#DCE5DE', label: 'Default / Border' },
+    { name: 'Disabled', hex: '#EFEEF2', label: 'Default / Disabled' },
+    { name: 'Surface', hex: '#F5F5F5', label: 'Default / White Cloud' },
+    { name: 'Danger', hex: '#FF3A29', label: 'Message / Danger' },
+    { name: 'Info', hex: '#2472BA', label: 'Message / Info' },
+  ].map(({ name, hex, label }) => (
+    <div key={hex} style={{ display: 'flex', flexDirection: 'column', gap: 6, width: 100 }}>
+      <div style={{
+        width: 100,
+        height: 64,
+        borderRadius: 8,
+        background: hex,
+        border: hex === '#F5F5F5' || hex === '#EFEEF2' || hex === '#DCE5DE' ? '1px solid #E0DEED' : 'none',
+      }} />
+      <span style={{ fontSize: 12, fontWeight: 600, color: '#203224' }}>{name}</span>
+      <span style={{ fontSize: 11, color: '#9490AC', fontFamily: 'monospace' }}>{hex}</span>
+      <span style={{ fontSize: 10, color: '#9490AC' }}>{label}</span>
+    </div>
+  ))}
+</div>
+
+## Tipografia
+
+<div style={{ display: 'flex', flexDirection: 'column', gap: 8, marginBottom: 40, padding: '24px', background: '#F5F5F5', borderRadius: 8 }}>
+  {[
+    { weight: 700, label: 'Bold 700', size: 28 },
+    { weight: 600, label: 'Semibold 600', size: 24 },
+    { weight: 500, label: 'Medium 500', size: 20 },
+    { weight: 400, label: 'Regular 400', size: 18 },
+  ].map(({ weight, label, size }) => (
+    <div key={weight} style={{ display: 'flex', alignItems: 'baseline', gap: 16 }}>
+      <span style={{ width: 120, fontSize: 11, color: '#9490AC', flexShrink: 0 }}>{label}</span>
+      <span style={{ fontFamily: "'Clash Grotesk', sans-serif", fontWeight: weight, fontSize: size, color: '#203224', lineHeight: 1.3 }}>
+        Clash Grotesk — Treeal Design System
+      </span>
+    </div>
+  ))}
+</div>
+
+## Componentes
+
+| Componente | Status | Figma |
+|---|---|---|
+| Button | ✅ Pronto | [→ Figma](https://figma.com/design/VekfomfsZU4q2iaY1j4VXP?node-id=3107:5509) |
+| Input | ✅ Pronto | [→ Figma](https://figma.com/design/VekfomfsZU4q2iaY1j4VXP?node-id=3105:3885) |
+| Select | ✅ Pronto | — |
+| BaseCheckRadio | ✅ Pronto | [→ Figma](https://figma.com/design/VekfomfsZU4q2iaY1j4VXP?node-id=3106:4752) |
+| Tab | ✅ Pronto | — |
+| Alert | ✅ Pronto | [→ Figma](https://figma.com/design/VekfomfsZU4q2iaY1j4VXP?node-id=3114:1706) |
+| Modal | ✅ Pronto | [→ Figma](https://figma.com/design/VekfomfsZU4q2iaY1j4VXP?node-id=5139:1464) |
+| Pagination | ✅ Pronto | [→ Figma](https://figma.com/design/VekfomfsZU4q2iaY1j4VXP?node-id=3203:662) |
+| Steps | ✅ Pronto | [→ Figma](https://figma.com/design/VekfomfsZU4q2iaY1j4VXP?node-id=3413:1066) |
+| Nav | ✅ Pronto | [→ Figma](https://figma.com/design/VekfomfsZU4q2iaY1j4VXP?node-id=3554:548) |
+| Header | ✅ Pronto | [→ Figma](https://figma.com/design/VekfomfsZU4q2iaY1j4VXP?node-id=3576:994) |
+| Upload | ✅ Pronto | [→ Figma](https://figma.com/design/VekfomfsZU4q2iaY1j4VXP?node-id=3210:3538) |
+| Icon | ✅ Pronto | — |
+
+## Stack
+
+| | |
+|---|---|
+| React | 18 |
+| TypeScript | 5 |
+| Vite | 5 (library mode) |
+| CSS Modules | nativo |
+| Storybook | 8 |
+
+## Fontes utilizadas
+
+- **Clash Grotesk** — `400, 500, 600, 700` via [Fontshare](https://www.fontshare.com/fonts/clash-grotesk)
+- **Material Symbols Outlined** — ícones do componente `Icon` via Google Fonts

@@ -1,0 +1,143 @@
+/**
+ * Button styles — values from Figma node BtnsBase (3107:5509)
+ * Font: Clash Grotesk · Semibold · 16px · lh 1.5 · ls 0
+ */
+
+/* ─── Base ─────────────────────────────────────────────────────────────── */
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding-top: 6px;    /* py-[6px] from Figma */
+  padding-bottom: 6px;
+
+  font-family: 'Clash Grotesk', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0;
+  text-align: center;
+  white-space: nowrap;
+
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  box-sizing: border-box;
+
+  transition: opacity 0.15s ease;
+}
+
+.button:focus-visible {
+  outline: 2px solid #0F6C13;
+  outline-offset: 2px;
+}
+
+/* ─── Sizes ─────────────────────────────────────────────────────────────── */
+
+/* size="36" (sm) */
+.sm {
+  gap: 6px;            /* gap-[6px] from Figma */
+  min-height: 36px;    /* min-h-[36px] from Figma */
+  padding-left: 12px;  /* px-[12px] from Figma */
+  padding-right: 12px;
+}
+
+/* size="48" (md) */
+.md {
+  gap: 8px;            /* gap-[8px] from Figma */
+  min-height: 48px;    /* min-h-[48px] from Figma */
+  padding-left: 16px;  /* px-[16px] from Figma */
+  padding-right: 16px;
+}
+
+/* ─── Variants ───────────────────────────────────────────────────────────── */
+
+/* Outline — border #0F6C13 · text #0F6C13 · radius 12px */
+.outline {
+  background: transparent;
+  border: 1px solid #0F6C13;
+  color: #0F6C13;
+  border-radius: 12px;
+}
+
+.outline:hover:not(:disabled) {
+  background: rgba(15, 108, 19, 0.06);
+}
+
+.outline:active:not(:disabled) {
+  background: rgba(15, 108, 19, 0.12);
+}
+
+/* Fill — bg #E7DA10 · text #203224 · radius 12px */
+.fill {
+  background: #E7DA10;
+  color: #203224;
+  border-radius: 12px;
+}
+
+.fill:hover:not(:disabled) {
+  background: #d4c80f;
+}
+
+.fill:active:not(:disabled) {
+  background: #bdb10d;
+}
+
+/* Secondary — bg #203224 · text #FFFFFF · radius 12px */
+.secondary {
+  background: #203224;
+  color: #FFFFFF;
+  border-radius: 12px;
+}
+
+.secondary:hover:not(:disabled) {
+  background: #2c4433;
+}
+
+.secondary:active:not(:disabled) {
+  background: #162319;
+}
+
+/* Text — text #2472BA · radius 8px (differs from others) */
+.text {
+  background: transparent;
+  color: #2472BA;
+  border-radius: 8px;
+}
+
+.text:hover:not(:disabled) {
+  background: rgba(36, 114, 186, 0.06);
+}
+
+.text:active:not(:disabled) {
+  background: rgba(36, 114, 186, 0.12);
+}
+
+/* Disabled — bg #EFEEF2 · text #524E69 · radius 12px */
+.disabled,
+.button:disabled {
+  background: #EFEEF2;
+  color: #524E69;
+  border-radius: 12px;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* ─── Inner elements ─────────────────────────────────────────────────────── */
+
+.label {
+  flex: 1 0 0;
+  min-width: 1px;
+  min-height: 1px;
+}
+
+.icon {
+  width: 24px;   /* size-[24px] from Figma */
+  height: 24px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

@@ -1,0 +1,242 @@
+/**
+ * Steps styles — values from Figma nodes StepItem (3413:1002) and Steps (3413:1066)
+ *
+ * Shape strategy: CSS clip-path chevron + margin-right:-16px + z-index stacking
+ * — no image assets, no external dependencies.
+ *
+ * States:
+ *   Default  → bg #E0DEED (Grayscale/200), text #203224
+ *   Hover    → bg #E7DA10 (Brand/Tertiary/Base), text #203224
+ *   Active   → bg #0F6C13 (Brand/Secondary/Base), text white
+ *   Complete → bg #203224 (Brand/Primary/Base), text white
+ *
+ * Typography:
+ *   label → Clash Grotesk Semibold 14px lh 1.30
+ *   num   → Clash Display Variable Semibold 21px lh 1.25
+ */
+
+/* ─── Wrapper ─────────────────────────────────────────────────────────────── */
+
+.steps {
+  display: flex;
+  align-items: stretch;
+  width: 100%;
+  /* Creates an isolated stacking context so z-index works correctly */
+  isolation: isolate;
+}
+
+/* ─── Step item — base ────────────────────────────────────────────────────── */
+
+.item {
+  flex: 1 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* 20px side padding keeps content clear of arrow/notch (16px + 4px buffer) */
+  padding: 8px 20px;    /* py-[8px] from Figma, px adapted for clip-path */
+  min-height: 62px;     /* h-[62px] from Figma */
+  position: relative;
+  box-sizing: border-box;
+  cursor: default;
+  transition: background 0.15s ease;
+}
+
+/* ─── Arrow / notch shapes (clip-path, 16px depth matching mr-[-16px]) ────── */
+
+/*
+ * Start: flat-left, arrow-right
+ * Overlaps next item by 16px → margin-right: -16px
+ */
+.typeStart {
+  clip-path: polygon(
+    0 0,
+    calc(100% - 16px) 0,
+    100% 50%,
+    calc(100% - 16px) 100%,
+    0 100%
+  );
+  margin-right: -16px;
+}
+
+/*
+ * Step: notch-left, arrow-right
+ * Overlaps next item by 16px → margin-right: -16px
+ */
+.typeStep {
+  clip-path: polygon(
+    16px 0,
+    calc(100% - 16px) 0,
+    100% 50%,
+    calc(100% - 16px) 100%,
+    0 100%,
+    16px 50%
+  );
+  margin-right: -16px;
+}
+
+/*
+ * End: notch-left, flat-right
+ * No right arrow → no negative margin
+ */
+.typeEnd {
+  clip-path: polygon(
+    16px 0,
+    100% 0,
+    100% 100%,
+    0 100%,
+    16px 50%
+  );
+}
+
+/* ─── State backgrounds ───────────────────────────────────────────────────── */
+
+.stateDefault  { background: #E0DEED; }   /* Grayscale/200 */
+.stateHover    { background: #E7DA10; }   /* Brand/Tertiary/Base */
+.stateActive   { background: #0F6C13; }   /* Brand/Secondary/Base */
+.stateComplete { background: #203224; }   /* Brand/Primary/Base */
+
+/* ─── Text colours ────────────────────────────────────────────────────────── */
+
+.textDark  { color: #203224; }   /* Default / Hover */
+.textLight { color: #FFFFFF; }   /* Active / Complete */
+
+/* ─── Label (Clash Grotesk Semibold 14px) ───────────────────────── */
+
+.label {
+  font-family: 'Clash Grotesk', sans-serif;
+  font-weight: 600;
+  font-size: 14px;           /* Body Texts/Text Small Bold */
+  line-height: 1.3;
+  letter-spacing: 0;
+  white-space: nowrap;
+  text-align: center;
+  margin: 0;
+}
+
+/* ─── Number (Clash Display Variable Semibold 21px) ─────────────────────── */
+
+.num {
+  font-family: 'Clash Display Variable', sans-serif;
+  font-weight: 600;
+  font-size: 21px;           /* Headings/H4 */
+  line-height: 1.25;
+  letter-spacing: 0;
+  white-space: nowrap;
+  text-align: center;
+  margin: 0;
+}
+
+/* ─── Description ────────────────────────────────────────────────────────── */
+
+.stepDescription {
+  font-family: 'Clash Grotesk', sans-serif;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 1.3;
+  letter-spacing: 0;
+  white-space: nowrap;
+  text-align: center;
+  margin: 0;
+  opacity: 0.75;
+}
+
+/* ─── Check icon slot (24×24) ─────────────────────────────────────────────── */
+
+.checkIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+/* ─── Minified (dots) ─────────────────────────────────────────────────────── */
+
+.minified {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+/* Dot base */
+.minDot {
+  border-radius: 50%;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+}
+
+.minDefault {
+  width: 8px;
+  height: 8px;
+  background: #E0DEED;     /* Grayscale/200 */
+}
+
+.minActive {
+  width: 12px;
+  height: 12px;
+  background: #0F6C13;     /* Brand/Secondary/Base */
+  box-shadow: 0 0 0 3px rgba(15, 108, 19, 0.18);
+}
+
+.minComplete {
+  width: 8px;
+  height: 8px;
+  background: #203224;     /* Brand/Primary/Base */
+}
+
+/* Connector line between dots */
+.minConnector {
+  flex: 1 1 0;
+  height: 2px;
+  min-width: 8px;
+  transition: background 0.2s ease;
+}
+
+.minConnectorDefault  { background: #E0DEED; }
+.minConnectorActive   { background: #E0DEED; }
+.minConnectorComplete { background: #203224; }
+
+/* ─── Responsive (vertical) — small screens ──────────────────────────────── */
+
+@media (max-width: 600px) {
+  .stepsResponsive {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .stepsResponsive .item {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 12px;
+    min-height: 52px;
+    padding: 10px 16px;
+    border-radius: 10px;
+  }
+
+  /* Remove chevron shapes on mobile */
+  .stepsResponsive .typeStart,
+  .stepsResponsive .typeStep,
+  .stepsResponsive .typeEnd {
+    clip-path: none;
+    margin-right: 0;
+  }
+
+  .stepsResponsive .label,
+  .stepsResponsive .stepDescription {
+    text-align: left;
+    white-space: normal;
+  }
+
+  .stepsResponsive .num {
+    font-size: 18px;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .stepsResponsive .checkIcon {
+    flex-shrink: 0;
+  }
+}

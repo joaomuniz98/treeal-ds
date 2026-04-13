@@ -1,0 +1,167 @@
+/**
+ * Modal styles — values from Figma node Modal (5139:1464)
+ *
+ * Layout: bottom-sheet pattern — modal anchored to the bottom of the viewport,
+ * rounded-tl-16 + rounded-tr-16, max-width 393px (mobile-first).
+ *
+ * Colors:
+ *   bg white         #FFFFFF
+ *   heading/desc     #524E69  (Default Colors/Text dark)
+ *   slot border      #E0DEED  (Grayscale/200)
+ *   slot text        #757094  (Default Colors/Text medium)
+ *   slot shadow      rgba(36,49,92,0.16)
+ *   btn secondary    #203224  (Brand/Primary/Base)
+ *   btn primary      #E7DA10  (Brand/Tertiary/Base)
+ *
+ * Typography:
+ *   title  → Clash Display Variable Semibold 21px lh 1.25  (Headings/H4)
+ *   desc   → Clash Grotesk Regular 16px lh 1.30  (Body Texts/Text)
+ *   btn    → Clash Grotesk Semibold 16px lh 1.50  (Body Texts/Button)
+ */
+
+/* ─── Overlay ────────────────────────────────────────────────────────────── */
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  z-index: 1000;
+  /* Fade in */
+  animation: overlayIn 0.2s ease forwards;
+}
+
+@keyframes overlayIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* ─── Container ──────────────────────────────────────────────────────────── */
+
+.modal {
+  background: #FFFFFF;
+  border-radius: 16px 16px 0 0;
+  width: 100%;
+  max-width: 393px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding: 24px 24px 32px;
+  box-sizing: border-box;
+  /* Slide up */
+  animation: slideUp 0.25s ease forwards;
+}
+
+@keyframes slideUp {
+  from { transform: translateY(40px); opacity: 0; }
+  to   { transform: translateY(0);    opacity: 1; }
+}
+
+/* ─── Heading ────────────────────────────────────────────────────────────── */
+
+.heading {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: #524E69;
+  width: 100%;
+}
+
+.title {
+  font-family: 'Clash Display Variable', sans-serif;
+  font-weight: 600;
+  font-size: 21px;
+  line-height: 1.25;
+  letter-spacing: 0;
+  margin: 0;
+}
+
+.description {
+  font-family: 'Clash Grotesk', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.3;
+  letter-spacing: 0;
+  margin: 0;
+}
+
+/* ─── Body (customizable slot) ───────────────────────────────────────────── */
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+/* ─── Actions ────────────────────────────────────────────────────────────── */
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+
+.btns {
+  display: flex;
+  gap: 16px;
+  width: 100%;
+}
+
+/* Secondary button — #203224 bg, white text */
+.btnSecondary {
+  flex: 1 1 0;
+  min-height: 48px;
+  padding: 6px 16px;
+  background: #203224;
+  border: none;
+  border-radius: 12px;
+  font-family: 'Clash Grotesk', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #FFFFFF;
+  cursor: pointer;
+  transition: opacity 0.15s ease;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.btnSecondary:hover   { opacity: 0.88; }
+.btnSecondary:active  { opacity: 0.75; }
+
+/* Primary (Fill) button — #E7DA10 bg, #203224 text */
+.btnPrimary {
+  flex: 1 1 0;
+  min-height: 48px;
+  padding: 6px 16px;
+  background: #E7DA10;
+  border: none;
+  border-radius: 12px;
+  font-family: 'Clash Grotesk', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #203224;
+  cursor: pointer;
+  transition: opacity 0.15s ease;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.btnPrimary:hover  { opacity: 0.88; }
+.btnPrimary:active { opacity: 0.75; }
+
+/* ─── Small screens — add breathing room so modal isn't flush to edges ─────── */
+
+@media (max-width: 393px) {
+  .modal {
+    margin: 0 12px;
+    width: calc(100% - 24px);
+    border-radius: 16px;
+    margin-bottom: 12px;
+  }
+}

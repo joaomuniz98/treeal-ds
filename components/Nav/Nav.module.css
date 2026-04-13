@@ -1,0 +1,507 @@
+/**
+ * Nav styles — values from Figma node NavPrimary (3554:548)
+ *
+ * Types:
+ *   Open    → 216px wide, full labels, section titles, collapse footer
+ *   Closed  → 80px wide, icons only, section titles hidden, expand footer
+ *   Mobile  → 216px wide, dark bg (#203224), header with bell + "Menu" label,
+ *              items with right chevron, footer with CTA + workspace + avatar
+ *
+ * Colors:
+ *   sidebar bg (Open/Closed): #F5F5F5
+ *   sidebar bg (Mobile):      #203224
+ *   active item:              #E7DA10 (brand tertiary)
+ *   inactive text:            #524E69
+ *   active text:              #203224
+ *   section title:            #9490AC
+ *   border:                   #DCE5DE
+ */
+
+/* ─── Root ───────────────────────────────────────────────────────────────── */
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* ─── Open / Closed (light sidebar) ─────────────────────────────────────── */
+
+.navOpen,
+.navClosed {
+  background: #F5F5F5;
+}
+
+.navOpen  { width: 216px; }
+.navClosed { width: 80px; }
+
+/* ─── Mobile (light sidebar, same bg as open) ───────────────────────────── */
+
+.navMobile {
+  background: #F5F5F5;
+  width: 216px;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   HEADER
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+.header {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+/* Open header: 16px all-round padding, logo fills space */
+.headerOpen {
+  padding: 16px;
+  gap: 8px;
+}
+
+/* Closed header: 64px tall, horizontal padding 20px/12px */
+.headerClosed {
+  height: 64px;
+  flex-direction: column;
+  justify-content: center;
+  padding: 16px 12px 16px 20px;
+  gap: 0;
+}
+
+/* Mobile header: border bottom, 12px vertical / 24px horizontal */
+.headerMobile {
+  border-bottom: 1px solid #DCE5DE;
+  padding: 12px 24px;
+  gap: 8px;
+  justify-content: space-between;
+}
+
+.logoIcon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logoFull {
+  flex: 1 1 0;
+  display: flex;
+  align-items: center;
+}
+
+.headerActions {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.bellBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  border-radius: 400px;
+  color: #203224;
+  flex-shrink: 0;
+}
+
+.bellBtn:hover { background: rgba(0, 0, 0, 0.06); }
+
+.menuBtn {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 12px;
+  border-radius: 4px;
+  color: #203224;
+  flex-shrink: 0;
+}
+
+.menuBtn:hover { background: rgba(0, 0, 0, 0.05); }
+
+.menuBtnLabel {
+  font-family: 'Clash Grotesk', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.3;
+  color: #203224;
+  white-space: nowrap;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   LINKS AREA
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+.links {
+  flex: 1 1 0;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.linksOpen   { padding: 0 16px; gap: 24px; padding-top: 16px; padding-bottom: 16px; }
+.linksClosed { padding: 0 8px; gap: 16px; padding-top: 16px; padding-bottom: 16px; }
+.linksMobile { padding: 16px 0; gap: 24px; }
+
+/* ─── Section ────────────────────────────────────────────────────────────── */
+
+.section {
+  display: flex;
+  flex-direction: column;
+}
+
+.sectionTitle {
+  font-family: 'Clash Grotesk', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.3;
+  color: #9490AC;
+  padding-bottom: 8px;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.sectionItems {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* ─── Nav item — Open ─────────────────────────────────────────────────────── */
+
+.item {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  width: 100%;
+  box-sizing: border-box;
+  transition: background 0.15s ease;
+}
+
+/* Open item */
+.itemOpen {
+  gap: 8px;
+  padding: 12px 16px;
+  border-radius: 4px;
+}
+
+.itemOpen:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.itemOpenActive {
+  background: #E7DA10;
+  border-radius: 6px;
+}
+
+.itemOpenActive:hover {
+  background: #E7DA10;
+}
+
+/* Closed item */
+.itemClosed {
+  justify-content: center;
+  padding: 12px;
+  border-radius: 4px;
+}
+
+.itemClosed:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.itemClosedActive {
+  background: #E7DA10;
+  border-radius: 6px;
+  justify-content: center;
+}
+
+.itemClosedActive:hover {
+  background: #E7DA10;
+}
+
+/* Mobile item — same visual as Open */
+.itemMobile {
+  gap: 8px;
+  padding: 12px 16px;
+  border-radius: 4px;
+}
+
+.itemMobile:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.itemMobileActive {
+  background: #E7DA10;
+  border-radius: 6px;
+}
+
+.itemMobileActive:hover {
+  background: #E7DA10;
+}
+
+/* ─── Item icon ──────────────────────────────────────────────────────────── */
+
+.itemIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.itemIconDark  { color: #524E69; }
+
+/* ─── Item label ─────────────────────────────────────────────────────────── */
+
+.itemLabel {
+  font-family: 'Clash Grotesk', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.3;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex: 1 0 0;
+  text-align: left;
+}
+
+.itemLabelDefault { color: #524E69; }
+.itemLabelActive  { color: #203224; }
+
+/* ─── Chevron ────────────────────────────────────────────────────────────── */
+
+.chevron {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  color: #9490AC;
+  transition: transform 0.2s ease;
+}
+
+.chevronOpen {
+  transform: rotate(90deg);
+}
+
+/* ─── Sub-items (accordion) ─────────────────────────────────────────────── */
+
+.subItems {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.25s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.subItemsVisible {
+  max-height: 600px;
+}
+
+.subItem {
+  display: flex;
+  align-items: center;
+  padding: 8px 16px 8px 48px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: left;
+  font-family: 'Clash Grotesk', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #524E69;
+  border-radius: 4px;
+  transition: background 0.15s ease;
+}
+
+.subItem:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.subItemActive {
+  color: #203224;
+  font-weight: 600;
+}
+
+/* Mobile sub-items — same as light nav */
+.subItemsMobile {
+  background: transparent;
+}
+
+.subItemMobile {
+  color: #524E69;
+  padding: 8px 16px 8px 48px;
+}
+
+.subItemMobile:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.subItemMobile.subItemActive {
+  color: #203224;
+  font-weight: 600;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   FOOTER
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+.footer {
+  flex-shrink: 0;
+}
+
+/* ─── Open/Closed footer: collapse/expand button ─────────────────────────── */
+
+.collapseBtn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 12px 16px;
+  background: transparent;
+  border: none;
+  border-top: 1px solid #DCE5DE;
+  cursor: pointer;
+  font-family: 'Clash Grotesk', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.3;
+  color: #9490AC;
+  box-sizing: border-box;
+  transition: background 0.15s ease;
+}
+
+.collapseBtn:hover { background: rgba(0, 0, 0, 0.04); }
+
+.collapseBtnClosed {
+  justify-content: center;
+}
+
+.collapseBtnIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  color: #9490AC;
+}
+
+/* ─── Mobile footer ──────────────────────────────────────────────────────── */
+
+.footerMobile {
+  border-top: 1px solid #DCE5DE;
+  padding: 16px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 16px;
+  flex-shrink: 0;
+}
+
+/* Avatar row */
+.avatarRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+}
+
+.avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #0F6C13;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.avatarInitials {
+  font-family: 'Clash Display', 'Clash Grotesk', sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  color: #FFFFFF;
+}
+
+.avatarInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  min-width: 0;
+}
+
+.avatarName {
+  font-family: 'Clash Grotesk', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.43;
+  color: #203224;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.avatarRole {
+  font-family: 'Clash Grotesk', sans-serif;
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 1.3;
+  color: #524E69;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Logout button */
+.logoutBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  background: transparent;
+  border: 1px solid #DE0000;
+  border-radius: 8px;
+  cursor: pointer;
+  padding: 8px 16px;
+  font-family: 'Clash Grotesk', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.3;
+  color: #DE0000;
+  width: 100%;
+  box-sizing: border-box;
+  transition: background 0.15s ease;
+}
+
+.logoutBtn:hover { background: rgba(222, 0, 0, 0.06); }
+
+.logoutBtn:hover { opacity: 0.75; }
+
+.logoutCircle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
