@@ -252,7 +252,6 @@ function TypographyTokens() {
 // ─── Meta ─────────────────────────────────────────────────────────────────────
 
 const meta: Meta = {
-  title: 'Fundamentos/Tipografia',
   parameters: {
     layout: 'fullscreen',
     controls: { hideNoControlsWarning: true },

@@ -69,7 +69,6 @@ const columns: TableColumn<Row>[] = [
 // ─── Meta ─────────────────────────────────────────────────────────────────────
 
 const meta: Meta<typeof Table> = {
-  title: 'Conteúdo/Tabelas',
   component: Table,
   parameters: {
     layout: 'padded',

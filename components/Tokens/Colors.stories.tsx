@@ -166,7 +166,6 @@ function ColorTokens() {
 // ─── Meta ─────────────────────────────────────────────────────────────────────
 
 const meta: Meta = {
-  title: 'Fundamentos/Cores',
   parameters: {
     layout: 'fullscreen',
     controls: { hideNoControlsWarning: true },

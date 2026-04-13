@@ -24,7 +24,6 @@ function IconBell() {
 
 const sections: NavSection[] = [
   {
-    title: 'Principal',
     items: [
       { id: 'home',       label: 'Início',        icon: <IconHome /> },
       { id: 'reports',    label: 'Relatórios',    icon: <IconChart />,

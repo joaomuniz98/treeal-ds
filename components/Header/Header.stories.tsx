@@ -10,7 +10,6 @@ const user = {
 };
 
 const meta: Meta<typeof Header> = {
-  title: 'Componentes/Header',
   component: Header,
   parameters: { layout: 'fullscreen' },
   argTypes: {

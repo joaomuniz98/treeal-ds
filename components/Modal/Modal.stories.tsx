@@ -76,7 +76,6 @@ function SlotItem({ label, sublabel, value }: { label: string; sublabel?: string
 // ─── Meta ─────────────────────────────────────────────────────────────────────
 
 const meta: Meta<typeof Modal> = {
-  title: 'Componentes/Modal',
   component: Modal,
   parameters: {
     layout: 'fullscreen',

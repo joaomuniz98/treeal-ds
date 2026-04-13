@@ -3,7 +3,6 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { Pagination } from './Pagination';
 
 const meta: Meta<typeof Pagination> = {
-  title: 'Componentes/Paginação',
   component: Pagination,
   argTypes: {
     sizes:        { control: 'inline-radio', options: ['xs', 'md', 'lg'] },
