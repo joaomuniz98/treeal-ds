@@ -45,9 +45,10 @@
   border-radius: 16px 16px 0 0;
   width: 100%;
   max-width: 393px;
+  /* Never taller than viewport — heading + actions always visible */
+  max-height: calc(100vh - 48px);
   display: flex;
   flex-direction: column;
-  gap: 32px;
   padding: 24px 24px 32px;
   box-sizing: border-box;
   /* Slide up */
@@ -62,6 +63,7 @@
 /* ─── Heading ────────────────────────────────────────────────────────────── */
 
 .heading {
+  flex-shrink: 0;
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -94,11 +96,21 @@
   flex-direction: column;
   gap: 8px;
   width: 100%;
+  /* Scroll when content is taller than available space */
+  overflow-y: auto;
+  flex: 1 1 auto;
+  margin: 32px 0;
+}
+
+/* Spacing when there is no body between heading and actions */
+.heading + .actions {
+  margin-top: 32px;
 }
 
 /* ─── Actions ────────────────────────────────────────────────────────────── */
 
 .actions {
+  flex-shrink: 0;
   display: flex;
   flex-direction: column;
   gap: 16px;
