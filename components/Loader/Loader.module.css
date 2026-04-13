@@ -1,0 +1,60 @@
+/* ─── Overlay ─────────────────────────────────────────────────────────────── */
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.40);
+  backdrop-filter: blur(4px);
+}
+
+/* ─── Spinner circle ──────────────────────────────────────────────────────── */
+
+.spinner {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: #E7DA10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: pulseAnimation 2s infinite;
+}
+
+.spinner svg {
+  width: 60px;
+  height: 60px;
+  margin-left: 10px;
+}
+
+/* ─── SVG animations ──────────────────────────────────────────────────────── */
+
+.pathAnim {
+  stroke-dasharray: 300;
+  stroke-dashoffset: 2000;
+  stroke-width: 3px;
+  animation: dashAnimation 1.8s ease-in-out alternate infinite;
+}
+
+.fillAnim {
+  animation: fillAnimation 1.8s ease-in-out alternate infinite;
+}
+
+/* ─── Keyframes ───────────────────────────────────────────────────────────── */
+
+@keyframes pulseAnimation {
+  0%   { box-shadow: 0 0 0 0px rgba(231, 218, 16, 0.2); }
+  100% { box-shadow: 0 0 0 40px rgba(231, 218, 16, 0); }
+}
+
+@keyframes dashAnimation {
+  to { stroke-dashoffset: 0; }
+}
+
+@keyframes fillAnimation {
+  0%,  20%  { opacity: 0; }
+  60%, 100% { opacity: 1; }
+}

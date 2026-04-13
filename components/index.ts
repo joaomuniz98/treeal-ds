@@ -18,6 +18,9 @@ export { Header }           from './Header';
 export type { HeaderProps, HeaderVariant } from './Header';
 
 export { Input }            from './Input';
+
+export { Loader }           from './Loader';
+export type { LoaderProps } from './Loader';
 export type { InputProps, InputState } from './Input';
 
 export { Modal }            from './Modal';

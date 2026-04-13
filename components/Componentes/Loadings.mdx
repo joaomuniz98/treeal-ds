@@ -4,8 +4,31 @@ import { Meta } from '@storybook/blocks';
 
 # Loadings
 
-{/* Adicione aqui a descrição dos estados de loading. */}
+Componente de carregamento da Treeal. Exibe o logo animado sobre um overlay escuro enquanto uma operação está em andamento.
 
 ---
 
-{/* Adicione aqui os tipos (spinner, skeleton, progress) e boas práticas. */}
+## Loader
+
+O `Loader` bloqueia a tela com um overlay semitransparente e exibe o ícone Treeal com animação de pulso e traçado.
+
+**Props**
+
+| Prop | Tipo | Padrão | Descrição |
+|---|---|---|---|
+| `visible` | `boolean` | — | Exibe ou oculta o loader |
+| `overlay` | `boolean` | `true` | Envolve o spinner em um overlay de tela cheia |
+
+**Uso básico**
+
+```tsx
+import { Loader } from '@treeal/ds';
+
+<Loader visible={isLoading} />
+```
+
+**Só o spinner (sem overlay)**
+
+```tsx
+<Loader visible overlay={false} />
+```
