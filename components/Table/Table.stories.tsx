@@ -69,9 +69,8 @@ const columns: TableColumn<Row>[] = [
 // ─── Meta ─────────────────────────────────────────────────────────────────────
 
 const meta: Meta<typeof Table> = {
-  title: 'Componentes/Table',
+  title: 'Conteúdo/Tabelas',
   component: Table,
-  tags: ['autodocs'],
   parameters: {
     layout: 'padded',
   },

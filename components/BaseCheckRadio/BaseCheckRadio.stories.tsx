@@ -3,9 +3,8 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { BaseCheckRadio } from './BaseCheckRadio';
 
 const meta: Meta<typeof BaseCheckRadio> = {
-  title: 'Formulários/Checkbox & Radio',
+  title: 'Formulários/Checkbox e Radios',
   component: BaseCheckRadio,
-  tags: ['autodocs'],
   argTypes: {
     type:           { control: 'inline-radio', options: ['Check', 'Radio', 'Toggle'] },
     checked:        { control: 'boolean' },

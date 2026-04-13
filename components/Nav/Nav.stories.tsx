@@ -67,9 +67,8 @@ function NavLogoIcon() {
 }
 
 const meta: Meta<typeof Nav> = {
-  title: 'Componentes/Nav',
+  title: 'Componentes/Nav e Menu',
   component: Nav,
-  tags: ['autodocs'],
   parameters: { layout: 'fullscreen' },
   argTypes: {
     type: { control: 'select', options: ['open', 'closed', 'mobile'] },

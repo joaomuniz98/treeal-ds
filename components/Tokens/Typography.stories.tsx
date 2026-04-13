@@ -1,6 +1,6 @@
 import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
-import { typography } from '../../Fundação/Tipografia';
+import { typography } from '../../Fundamentos/Tipografia';
 
 const SAMPLE = 'The quick brown fox jumps over the lazy dog';
 const SAMPLE_PT = 'Configuração de tipografia do sistema Treeal';
@@ -253,7 +253,6 @@ function TypographyTokens() {
 
 const meta: Meta = {
   title: 'Fundação/Tipografia',
-  tags: ['autodocs'],
   parameters: {
     layout: 'fullscreen',
     controls: { hideNoControlsWarning: true },

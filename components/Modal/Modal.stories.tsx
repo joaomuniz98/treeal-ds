@@ -78,7 +78,6 @@ function SlotItem({ label, sublabel, value }: { label: string; sublabel?: string
 const meta: Meta<typeof Modal> = {
   title: 'Componentes/Modal',
   component: Modal,
-  tags: ['autodocs'],
   parameters: {
     layout: 'fullscreen',
   },

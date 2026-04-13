@@ -12,7 +12,6 @@ const user = {
 const meta: Meta<typeof Header> = {
   title: 'Componentes/Header',
   component: Header,
-  tags: ['autodocs'],
   parameters: { layout: 'fullscreen' },
   argTypes: {
     variant:          { control: 'select', options: ['Default', 'Mobile', 'MobileOpen'] },

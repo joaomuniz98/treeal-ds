@@ -20,7 +20,6 @@ const steps3: StepItem[] = [
 const meta: Meta<typeof Steps> = {
   title: 'Componentes/Steps',
   component: Steps,
-  tags: ['autodocs'],
   argTypes: {
     current:  { control: { type: 'number', min: 0 } },
     minified: { control: 'boolean' },

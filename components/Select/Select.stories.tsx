@@ -16,7 +16,6 @@ const STATES: SelectState[] = ['Default', 'Disabled', 'Error'];
 const meta: Meta<typeof Select> = {
   title: 'Formulários/Select',
   component: Select,
-  tags: ['autodocs'],
   argTypes: {
     state: { control: 'select', options: STATES },
     label:       { control: 'text' },

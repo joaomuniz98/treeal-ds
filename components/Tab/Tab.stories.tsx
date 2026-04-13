@@ -10,9 +10,8 @@ const items = [
 ];
 
 const meta: Meta<typeof Tab> = {
-  title: 'Componentes/Tab',
+  title: 'Componentes/Tabs',
   component: Tab,
-  tags: ['autodocs'],
   argTypes: {
     items:    { control: false },
     activeId: { control: 'text' },

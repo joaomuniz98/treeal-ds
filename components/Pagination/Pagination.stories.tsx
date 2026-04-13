@@ -5,7 +5,6 @@ import { Pagination } from './Pagination';
 const meta: Meta<typeof Pagination> = {
   title: 'Componentes/Paginação',
   component: Pagination,
-  tags: ['autodocs'],
   argTypes: {
     sizes:        { control: 'inline-radio', options: ['xs', 'md', 'lg'] },
     currentPage:  { control: { type: 'number', min: 1 } },

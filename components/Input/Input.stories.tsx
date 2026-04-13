@@ -6,7 +6,6 @@ import type { InputState, InputType } from './Input';
 const meta: Meta<typeof Input> = {
   title: 'Formulários/Input',
   component: Input,
-  tags: ['autodocs'],
   argTypes: {
     inputType: {
       control: 'select',

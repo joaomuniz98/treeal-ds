@@ -46,9 +46,8 @@ const ALL_ICONS = Object.values(ICON_CATALOG).flat();
 // ─── Meta ─────────────────────────────────────────────────────────────────────
 
 const meta: Meta<typeof Icon> = {
-  title: 'Fundação/Ícones',
+  title: 'Fundamentos/Ícones',
   component: Icon,
-  tags: ['autodocs'],
   argTypes: {
     name:   { control: 'text',         description: 'Nome do ícone Material Symbols (ex: "search", "home")' },
     size:   { control: 'inline-radio', options: [20, 24, 40, 48], description: 'Tamanho em px' },

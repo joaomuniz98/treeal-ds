@@ -166,8 +166,7 @@ function ColorTokens() {
 // ─── Meta ─────────────────────────────────────────────────────────────────────
 
 const meta: Meta = {
-  title: 'Fundação/Cores',
-  tags: ['autodocs'],
+  title: 'Fundamentos/Cores',
   parameters: {
     layout: 'fullscreen',
     controls: { hideNoControlsWarning: true },
