@@ -1,6 +1,6 @@
 import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
-import { typography } from '../../Fundamentos/Tipografia';
+import { typography } from '../../tokens/typography';
 
 const SAMPLE = 'The quick brown fox jumps over the lazy dog';
 const SAMPLE_PT = 'Configuração de tipografia do sistema Treeal';
