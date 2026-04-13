@@ -17,8 +17,8 @@ const config: StorybookConfig = {
   docs: {
     autodocs: 'tag',
   },
-  viteFinal: (config) => {
-    if (process.env.NODE_ENV === 'production') {
+  viteFinal: (config, { configType }) => {
+    if (configType === 'PRODUCTION') {
       config.base = '/treeal-ds/';
     }
     return config;
