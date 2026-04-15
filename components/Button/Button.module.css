@@ -30,7 +30,7 @@
 }
 
 .button:focus-visible {
-  outline: 2px solid #0F6C13;
+  outline: 2px solid var(--color-brand-secondary);
   outline-offset: 2px;
 }
 
@@ -57,8 +57,8 @@
 /* Outline — border #0F6C13 · text #0F6C13 · radius 12px */
 .outline {
   background: transparent;
-  border: 1px solid #0F6C13;
-  color: #0F6C13;
+  border: 1px solid var(--color-brand-secondary);
+  color: var(--color-brand-secondary);
   border-radius: 12px;
 }
 
@@ -72,38 +72,38 @@
 
 /* Fill — bg #E7DA10 · text #203224 · radius 12px */
 .fill {
-  background: #E7DA10;
-  color: #203224;
+  background: var(--color-brand-tertiary);
+  color: var(--color-brand-primary);
   border-radius: 12px;
 }
 
 .fill:hover:not(:disabled) {
-  background: #d4c80f;
+  background: var(--color-brand-tertiary-hover);
 }
 
 .fill:active:not(:disabled) {
-  background: #bdb10d;
+  background: var(--color-brand-tertiary-active);
 }
 
 /* Secondary — bg #203224 · text #FFFFFF · radius 12px */
 .secondary {
-  background: #203224;
-  color: #FFFFFF;
+  background: var(--color-brand-primary);
+  color: var(--color-white);
   border-radius: 12px;
 }
 
 .secondary:hover:not(:disabled) {
-  background: #2c4433;
+  background: var(--color-brand-primary-hover);
 }
 
 .secondary:active:not(:disabled) {
-  background: #162319;
+  background: var(--color-brand-primary-active);
 }
 
 /* Text — text #2472BA · radius 8px (differs from others) */
 .text {
   background: transparent;
-  color: #2472BA;
+  color: var(--color-info);
   border-radius: 8px;
 }
 
@@ -118,8 +118,8 @@
 /* Disabled — bg #EFEEF2 · text #524E69 · radius 12px */
 .disabled,
 .button:disabled {
-  background: #EFEEF2;
-  color: #524E69;
+  background: var(--color-disabled-bg);
+  color: var(--color-text-dark);
   border-radius: 12px;
   cursor: not-allowed;
   pointer-events: none;
@@ -133,9 +133,20 @@
   min-height: 1px;
 }
 
-.icon {
-  width: 24px;   /* size-[24px] from Figma */
+/* iconLeft — slot fixo 24×24 */
+.iconLeft {
+  width: 24px;
   height: 24px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* iconRight — largura livre para suportar logos de marca */
+.iconRight {
+  height: 24px;
+  width: auto;
   flex-shrink: 0;
   display: flex;
   align-items: center;

@@ -51,9 +51,9 @@ export function Button({
       aria-disabled={disabled}
       {...props}
     >
-      {iconLeft && <span className={styles.icon}>{iconLeft}</span>}
+      {iconLeft && <span className={styles.iconLeft}>{iconLeft}</span>}
       <span className={styles.label}>{children}</span>
-      {iconRight && <span className={styles.icon}>{iconRight}</span>}
+      {iconRight && <span className={styles.iconRight}>{iconRight}</span>}
     </button>
   );
 }
