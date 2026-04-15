@@ -8,6 +8,19 @@ const Icon = () => (
   </svg>
 );
 
+const UnidLogo = () => (
+  <svg height="18" viewBox="0 0 60 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="UNID">
+    <text y="15" fontFamily="'Clash Grotesk', sans-serif" fontWeight="700" fontSize="16" fill="#203224">UNID</text>
+  </svg>
+);
+
+const PersonIcon = () => (
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+    <circle cx="12" cy="7" r="4"/>
+  </svg>
+);
+
 const meta: Meta<typeof Button> = {
   title: 'Componentes/Botões',
   component: Button,
@@ -32,37 +45,6 @@ const meta: Meta<typeof Button> = {
 
 export default meta;
 type Story = StoryObj<typeof Button>;
-
-/** Logo UNID — representação inline do ícone de marca para o botão SSO */
-const UnidLogo = () => (
-  <svg height="20" viewBox="0 0 110 30" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="UNID">
-    <text y="22" fontFamily="'Clash Grotesk', sans-serif" fontWeight="700" fontSize="22" fill="#203224">UNID</text>
-  </svg>
-);
-
-const PersonIcon = () => (
-  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
-    <circle cx="12" cy="7" r="4"/>
-  </svg>
-);
-
-export const SSOButton: Story = {
-  name: 'Login/Cadastro com parceiro (SSO)',
-  render: () => (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
-      <p style={{ fontSize: 11, fontWeight: 600, color: '#9490AC', margin: '0 0 4px', letterSpacing: 1, textTransform: 'uppercase' }}>
-        Variante fill + logo de marca à direita
-      </p>
-      <Button variant="fill" size="md" iconLeft={<PersonIcon />} iconRight={<UnidLogo />}>
-        Cadastrar com
-      </Button>
-      <Button variant="fill" size="md" iconLeft={<PersonIcon />} iconRight={<UnidLogo />}>
-        Entrar com
-      </Button>
-    </div>
-  ),
-};
 
 export const AllVariants: Story = {
   name: 'Todos os variantes',
@@ -92,6 +74,19 @@ export const AllVariants: Story = {
           <Button variant="outline" size="md" iconLeft={<Icon />}>Ícone esquerda</Button>
           <Button variant="outline" size="md" iconRight={<Icon />}>Ícone direita</Button>
           <Button variant="fill" size="md" iconLeft={<Icon />} iconRight={<Icon />}>Ambos</Button>
+        </div>
+      </div>
+      <div>
+        <p style={{ fontSize: 11, fontWeight: 600, color: '#9490AC', margin: '0 0 12px', letterSpacing: 1, textTransform: 'uppercase' }}>
+          Login / SSO
+        </p>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 12, flexWrap: 'wrap' }}>
+          <Button variant="fill" size="md" iconLeft={<PersonIcon />} iconRight={<UnidLogo />}>
+            Cadastrar com
+          </Button>
+          <Button variant="fill" size="sm" iconLeft={<PersonIcon />} iconRight={<UnidLogo />}>
+            Cadastrar com
+          </Button>
         </div>
       </div>
     </div>
