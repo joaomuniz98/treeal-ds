@@ -14,6 +14,9 @@ export type { BaseCheckRadioProps, CheckRadioType } from './BaseCheckRadio';
 export { Button }           from './Button';
 export type { ButtonProps, ButtonVariant, ButtonSize } from './Button';
 
+export { SSOButton }        from './SSOButton';
+export type { SSOButtonProps } from './SSOButton';
+
 export { Header }           from './Header';
 export type { HeaderProps, HeaderVariant } from './Header';
 

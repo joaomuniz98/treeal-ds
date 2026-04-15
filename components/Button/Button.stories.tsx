@@ -1,23 +1,11 @@
 import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
 import { Button } from './Button';
+import { SSOButton } from '../SSOButton';
 
 const Icon = () => (
   <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
     <path d="M10 3a7 7 0 1 1 0 14A7 7 0 0 1 10 3zm0 1.5a5.5 5.5 0 1 0 0 11 5.5 5.5 0 0 0 0-11zM10 8a.75.75 0 0 1 .75.75v3.5a.75.75 0 0 1-1.5 0v-3.5A.75.75 0 0 1 10 8zm0-2.5a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
-  </svg>
-);
-
-const UnidLogo = () => (
-  <svg height="18" viewBox="0 0 60 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="UNID">
-    <text y="15" fontFamily="'Clash Grotesk', sans-serif" fontWeight="700" fontSize="16" fill="#203224">UNID</text>
-  </svg>
-);
-
-const PersonIcon = () => (
-  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
-    <circle cx="12" cy="7" r="4"/>
   </svg>
 );
 
@@ -81,12 +69,8 @@ export const AllVariants: Story = {
           Login / SSO
         </p>
         <div style={{ display: 'flex', alignItems: 'center', gap: 12, flexWrap: 'wrap' }}>
-          <Button variant="fill" size="md" iconLeft={<PersonIcon />} iconRight={<UnidLogo />}>
-            Cadastrar com
-          </Button>
-          <Button variant="fill" size="sm" iconLeft={<PersonIcon />} iconRight={<UnidLogo />}>
-            Cadastrar com
-          </Button>
+          <SSOButton size="md">Cadastrar com</SSOButton>
+          <SSOButton size="sm">Entrar com</SSOButton>
         </div>
       </div>
     </div>
