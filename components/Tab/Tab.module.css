@@ -4,7 +4,7 @@
   display: flex;
   align-items: flex-end;
   gap: 4px;
-  border-bottom: 2px solid #DCE5DE;
+  border-bottom: 2px solid var(--color-border);
   flex-wrap: wrap;
 }
 
@@ -28,7 +28,7 @@
   border: 1px solid transparent;
   border-bottom: none;
   background: transparent;
-  color: #524E69;
+  color: var(--color-text-dark);
 
   cursor: pointer;
   box-sizing: border-box;
@@ -37,29 +37,29 @@
 }
 
 .tab:focus-visible {
-  outline: 2px solid #0F6C13;
+  outline: 2px solid var(--color-brand-secondary);
   outline-offset: 2px;
 }
 
 .tab:hover:not(.active):not(.disabled) {
   background: rgba(15, 108, 19, 0.06);
-  color: #203224;
-  border-color: #DCE5DE;
+  color: var(--color-brand-primary);
+  border-color: var(--color-border);
 }
 
 /* ─── Active ─────────────────────────────────────────────────────────────── */
 
 .active {
-  background: #0F6C13;
-  color: #FFFFFF;
-  border-color: #0F6C13;
-  border-bottom-color: #0F6C13;
+  background: var(--color-brand-secondary);
+  color: var(--color-white);
+  border-color: var(--color-brand-secondary);
+  border-bottom-color: var(--color-brand-secondary);
 }
 
 /* ─── Disabled ───────────────────────────────────────────────────────────── */
 
 .disabled {
-  color: #9490AC;
+  color: var(--color-text-medium);
   cursor: not-allowed;
   pointer-events: none;
 }

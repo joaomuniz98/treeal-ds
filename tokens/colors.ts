@@ -10,6 +10,10 @@ export const colors = {
     primary: {
       /** #203224 — Secondary button bg; Fill button text; Check/Radio checked bg */
       base: '#203224',
+      /** #2c4433 — Secondary button hover */
+      hover: '#2c4433',
+      /** #162319 — Secondary button active */
+      active: '#162319',
     },
     secondary: {
       /** #0F6C13 — Outline button border & text */
@@ -18,6 +22,10 @@ export const colors = {
     tertiary: {
       /** #E7DA10 — Fill button background */
       base: '#E7DA10',
+      /** #d4c80f — Fill button hover */
+      hover: '#d4c80f',
+      /** #bdb10d — Fill button active */
+      active: '#bdb10d',
     },
   },
   default: {
@@ -39,6 +47,10 @@ export const colors = {
     modalBorder: '#E0DEED',
     /** #757094 — Default Colors/Text medium · Modal slot text, option labels */
     modalTextMedium: '#757094',
+    /** #F3F3F3 — Workspace switcher background */
+    workspaceBg: '#F3F3F3',
+    /** #EBEBEB — Workspace switcher hover */
+    workspaceBgHover: '#EBEBEB',
   },
   message: {
     info: {
@@ -49,6 +61,22 @@ export const colors = {
       /** #FF3A29 — Error input border & message */
       base: '#FF3A29',
     },
+    success: {
+      /** #2C7D56 — Alert success title */
+      base: '#2C7D56',
+      /** #D6F5D8 — Badge success background */
+      bg: '#D6F5D8',
+    },
+    warning: {
+      /** #A36A00 — Alert warning title */
+      base: '#A36A00',
+    },
+    error: {
+      /** #DE0000 — Alert error title; logout button */
+      base: '#DE0000',
+    },
+    /** #5BA980 — Status dot (online indicator) */
+    statusDot: '#5BA980',
   },
   /** Gray scale — FileUpload / Gray/x00 tokens */
   gray: {
@@ -62,6 +90,8 @@ export const colors = {
     300: '#D0D5DD',
     /** #EAECF0 — Gray/200 · file item border, progress track */
     200: '#EAECF0',
+    /** #F8FAFC — Gray/50 · upload action button hover */
+    50: '#F8FAFC',
   },
   /** Pagination tokens — Pagination (3203:662) */
   pagination: {
@@ -93,6 +123,8 @@ export const colors = {
     500: '#2970FF',
     /** #5280FF — Primary/400 */
     400: '#5280FF',
+    /** #0040C1 — Primary/700 · progress gradient end */
+    700: '#0040C1',
     /** #B2C9FF — Primary/200 · file badge background */
     200: '#B2C9FF',
     /** #DBE8FF — Primary/100 · file badge ring, active drop-zone bg */

@@ -9,9 +9,9 @@
   display: flex;
   align-items: center;
   width: 100%;
-  border: 1px dashed #D0D5DD;   /* Gray/300 — default border */
+  border: 1px dashed var(--color-gray-300);   /* Gray/300 — default border */
   border-radius: 8px;           /* rounded-[8px] from Figma */
-  background: #FFFFFF;
+  background: var(--color-white);
   overflow: hidden;
   cursor: pointer;
   box-sizing: border-box;
@@ -37,8 +37,8 @@
 /* Hover / drag-over state */
 .dropzone:hover,
 .dropzoneDragging {
-  background: #DBE8FF;           /* Primary/100 */
-  border-color: #2970FF;         /* Primary/500 */
+  background: var(--color-primary-100);    /* Primary/100 */
+  border-color: var(--color-primary-500);  /* Primary/500 */
   border-style: solid;
 }
 
@@ -91,7 +91,7 @@
   font-size: 12px;       /* Paragraph/SM/Regular */
   line-height: 1.6;
   letter-spacing: 0;
-  color: #101828;        /* Gray/900 */
+  color: var(--color-gray-900);        /* Gray/900 */
   white-space: nowrap;
   margin: 0;
 }
@@ -102,7 +102,7 @@
   font-size: 12px;
   line-height: 1.6;
   letter-spacing: 0;
-  color: #154FEF;        /* Primary/600 */
+  color: var(--color-primary-600);     /* Primary/600 */
   white-space: nowrap;
   background: none;
   border: none;
@@ -117,7 +117,7 @@
   font-size: 10px;       /* Paragraph/XS/Regular */
   line-height: 1.6;
   letter-spacing: 0;
-  color: #667085;        /* Gray/500 */
+  color: var(--color-gray-500);        /* Gray/500 */
   white-space: nowrap;
   margin: 0;
   width: 100%;
@@ -138,8 +138,8 @@
   display: flex;
   gap: 16px;         /* gap-[16px] from Figma */
   padding: 16px;     /* p-[16px] from Figma */
-  background: #FFFFFF;
-  border: 1px solid #EAECF0;   /* Gray/200 */
+  background: var(--color-white);
+  border: 1px solid var(--color-gray-200);   /* Gray/200 */
   border-radius: 8px;           /* rounded-[8px] from Figma */
   width: 100%;
   box-sizing: border-box;
@@ -162,8 +162,8 @@
   width: 32px;                   /* size-[32px] from Figma */
   height: 32px;
   flex-shrink: 0;
-  background: #B2C9FF;           /* Primary/200 */
-  border: 4px solid #DBE8FF;     /* Primary/100 · border-4 from Figma */
+  background: var(--color-primary-200);         /* Primary/200 */
+  border: 4px solid var(--color-primary-100);   /* Primary/100 · border-4 from Figma */
   border-radius: 999px;          /* rounded-[999px] from Figma */
   box-sizing: border-box;
   display: flex;
@@ -205,7 +205,7 @@
   font-size: 12px;   /* Paragraph/SM/Regular */
   line-height: 1.6;
   letter-spacing: 0;
-  color: #101828;    /* Gray/900 */
+  color: var(--color-gray-900);    /* Gray/900 */
   margin: 0;
   width: 100%;
   overflow: hidden;
@@ -219,7 +219,7 @@
   font-size: 10px;   /* Paragraph/XS/Regular */
   line-height: 1.6;
   letter-spacing: 0;
-  color: #667085;    /* Gray/500 */
+  color: var(--color-gray-500);    /* Gray/500 */
   margin: 0;
   width: 100%;
 }
@@ -239,19 +239,19 @@
   justify-content: center;
   width: 24px;       /* size-[24px] from Figma */
   height: 24px;
-  background: #FFFFFF;
-  border: 1px solid #EAECF0;   /* Gray/200 */
+  background: var(--color-white);
+  border: 1px solid var(--color-gray-200);   /* Gray/200 */
   border-radius: 4px;           /* rounded-[4px] from Figma */
   overflow: hidden;
   cursor: pointer;
   padding: 0;
   flex-shrink: 0;
-  color: #475467;               /* Gray/600 */
+  color: var(--color-gray-600);              /* Gray/600 */
   transition: background 0.1s ease;
 }
 
 .actionBtn:hover {
-  background: #F8FAFC;
+  background: var(--color-gray-50);
 }
 
 /* ─── Progress bar ───────────────────────────────────────────────────────── */
@@ -267,7 +267,7 @@
 .progressTrack {
   flex: 1 0 0;
   height: 4px;       /* h-[4px] from Figma */
-  background: #EAECF0;          /* Gray/200 */
+  background: var(--color-gray-200);          /* Gray/200 */
   border-radius: 999px;         /* rounded-[999px] from Figma */
   min-width: 1px;
   overflow: hidden;
@@ -281,7 +281,7 @@
   height: 100%;
   border-radius: 999px;
   /* Figma gradient: linear-gradient(1.53deg, #2970FF 0.2%, #0040C1 99.99%) */
-  background: linear-gradient(to right, #2970FF, #0040C1);
+  background: linear-gradient(to right, var(--color-primary-500), var(--color-primary-700));
   transition: width 0.3s ease;
 }
 
@@ -290,7 +290,7 @@
   font-weight: 400;
   font-size: 12px;
   line-height: 1.6;
-  color: #101828;    /* Gray/900 */
+  color: var(--color-gray-900);    /* Gray/900 */
   white-space: nowrap;
   flex-shrink: 0;
   margin: 0;
@@ -302,8 +302,8 @@
   width: 24px;       /* size-[24px] from Figma */
   height: 24px;
   flex-shrink: 0;
-  border: 2px solid #DBE8FF;    /* Primary/100 — track */
-  border-top-color: #2970FF;    /* Primary/500 — active arc */
+  border: 2px solid var(--color-primary-100);    /* Primary/100 — track */
+  border-top-color: var(--color-primary-500);    /* Primary/500 — active arc */
   border-radius: 50%;
   animation: spin 0.7s linear infinite;
 }

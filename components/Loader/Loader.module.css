@@ -17,7 +17,7 @@
   width: 120px;
   height: 120px;
   border-radius: 50%;
-  background-color: #E7DA10;
+  background-color: var(--color-brand-tertiary);
   display: flex;
   justify-content: center;
   align-items: center;

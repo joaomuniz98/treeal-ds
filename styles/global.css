@@ -1,6 +1,73 @@
 @import url('https://api.fontshare.com/v2/css?f[]=clash-grotesk@400,500,600,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap');
 
+:root {
+  /* ─── Brand ──────────────────────────────────────────────────────────────── */
+  --color-brand-primary:        #203224;
+  --color-brand-primary-hover:  #2c4433;
+  --color-brand-primary-active: #162319;
+  --color-brand-secondary:      #0F6C13;
+  --color-brand-tertiary:        #E7DA10;
+  --color-brand-tertiary-hover:  #d4c80f;
+  --color-brand-tertiary-active: #bdb10d;
+
+  /* ─── Default ────────────────────────────────────────────────────────────── */
+  --color-white:        #FFFFFF;
+  --color-text-dark:    #524E69;
+  --color-text-medium:  #9490AC;
+  --color-disabled-bg:  #EFEEF2;
+  --color-border:       #DCE5DE;
+  --color-step-default: #E0DEED;
+  --color-sidebar-bg:   #F5F5F5;
+  --color-modal-text:   #757094;
+
+  /* ─── Message ────────────────────────────────────────────────────────────── */
+  --color-info:         #2472BA;
+  --color-danger:       #FF3A29;
+  --color-success-text: #2C7D56;
+  --color-success-bg:   #D6F5D8;
+  --color-warning-text: #A36A00;
+  --color-error-text:   #DE0000;
+  --color-status-dot:   #5BA980;
+
+  /* ─── Alert backgrounds & borders ───────────────────────────────────────── */
+  --color-alert-default-bg:     #F9F8FC;
+  --color-alert-info-bg:        #F4F9FF;
+  --color-alert-info-border:    #C9E2FE;
+  --color-alert-success-bg:     #F5FBF7;
+  --color-alert-success-border: #CAE7D5;
+  --color-alert-warning-bg:     #FFF9E9;
+  --color-alert-warning-border: #FFDB90;
+  --color-alert-error-bg:       #FFF8F6;
+  --color-alert-error-border:   #FFCABF;
+
+  /* ─── Gray scale (Upload) ────────────────────────────────────────────────── */
+  --color-gray-900: #101828;
+  --color-gray-600: #475467;
+  --color-gray-500: #667085;
+  --color-gray-300: #D0D5DD;
+  --color-gray-200: #EAECF0;
+  --color-gray-50:  #F8FAFC;
+
+  /* ─── Pagination ─────────────────────────────────────────────────────────── */
+  --color-pagination-border: #CED4DA;
+  --color-pagination-text:   #101113;
+
+  /* ─── Blue primary scale (Upload) ───────────────────────────────────────── */
+  --color-primary-700: #0040C1;
+  --color-primary-600: #154FEF;
+  --color-primary-500: #2970FF;
+  --color-primary-200: #B2C9FF;
+  --color-primary-100: #DBE8FF;
+
+  /* ─── Misc ───────────────────────────────────────────────────────────────── */
+  --color-workspace-bg:       #F3F3F3;
+  --color-workspace-bg-hover: #EBEBEB;
+
+  /* ─── Shadows ────────────────────────────────────────────────────────────── */
+  --shadow-popper: 0px 1px 12px 0px rgba(25, 27, 35, 0.15);
+}
+
 .material-symbols-outlined {
   font-family: 'Material Symbols Outlined';
   font-weight: normal;

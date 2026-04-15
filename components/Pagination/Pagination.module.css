@@ -45,7 +45,7 @@
 }
 
 .item:focus-visible {
-  outline: 2px solid #0F6C13;
+  outline: 2px solid var(--color-brand-secondary);
   outline-offset: 1px;
 }
 
@@ -79,15 +79,15 @@
 
 /* Active page — bg #0F6C13, text white */
 .active {
-  background: #0F6C13;    /* Brand/Secondary/Base */
-  color: #FFFFFF;
+  background: var(--color-brand-secondary);    /* Brand/Secondary/Base */
+  color: var(--color-white);
   cursor: default;
 }
 
 /* Inactive page number — border #CED4DA, text #101113 */
 .inactive {
-  border: 1px solid #CED4DA;   /* Gray/Gray 4 */
-  color: #101113;               /* Dark/Dark 9 */
+  border: 1px solid var(--color-pagination-border);   /* Gray/Gray 4 */
+  color: var(--color-pagination-text);                  /* Dark/Dark 9 */
 }
 
 .inactive:hover {
@@ -100,7 +100,7 @@
 
 /* Dots (ellipsis) — no border, no bg */
 .dots {
-  color: #101113;
+  color: var(--color-pagination-text);
   cursor: default;
   border: none;
   background: transparent;
@@ -108,8 +108,8 @@
 
 /* Control buttons (prev, next, first, last) — border #CED4DA */
 .control {
-  border: 1px solid #CED4DA;
-  color: #101113;
+  border: 1px solid var(--color-pagination-border);
+  color: var(--color-pagination-text);
 }
 
 .control:hover {

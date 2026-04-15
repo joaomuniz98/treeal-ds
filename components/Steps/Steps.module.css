@@ -91,15 +91,15 @@
 
 /* ─── State backgrounds ───────────────────────────────────────────────────── */
 
-.stateDefault  { background: #E0DEED; }   /* Grayscale/200 */
-.stateHover    { background: #E7DA10; }   /* Brand/Tertiary/Base */
-.stateActive   { background: #0F6C13; }   /* Brand/Secondary/Base */
-.stateComplete { background: #203224; }   /* Brand/Primary/Base */
+.stateDefault  { background: var(--color-step-default); }    /* Grayscale/200 */
+.stateHover    { background: var(--color-brand-tertiary); }  /* Brand/Tertiary/Base */
+.stateActive   { background: var(--color-brand-secondary); } /* Brand/Secondary/Base */
+.stateComplete { background: var(--color-brand-primary); }   /* Brand/Primary/Base */
 
 /* ─── Text colours ────────────────────────────────────────────────────────── */
 
-.textDark  { color: #203224; }   /* Default / Hover */
-.textLight { color: #FFFFFF; }   /* Active / Complete */
+.textDark  { color: var(--color-brand-primary); }  /* Default / Hover */
+.textLight { color: var(--color-white); }           /* Active / Complete */
 
 /* ─── Label (Clash Grotesk Semibold 14px) ───────────────────────── */
 
@@ -170,20 +170,20 @@
 .minDefault {
   width: 8px;
   height: 8px;
-  background: #E0DEED;     /* Grayscale/200 */
+  background: var(--color-step-default);     /* Grayscale/200 */
 }
 
 .minActive {
   width: 12px;
   height: 12px;
-  background: #0F6C13;     /* Brand/Secondary/Base */
+  background: var(--color-brand-secondary);  /* Brand/Secondary/Base */
   box-shadow: 0 0 0 3px rgba(15, 108, 19, 0.18);
 }
 
 .minComplete {
   width: 8px;
   height: 8px;
-  background: #203224;     /* Brand/Primary/Base */
+  background: var(--color-brand-primary);    /* Brand/Primary/Base */
 }
 
 /* Connector line between dots */
@@ -194,9 +194,9 @@
   transition: background 0.2s ease;
 }
 
-.minConnectorDefault  { background: #E0DEED; }
-.minConnectorActive   { background: #E0DEED; }
-.minConnectorComplete { background: #203224; }
+.minConnectorDefault  { background: var(--color-step-default); }
+.minConnectorActive   { background: var(--color-step-default); }
+.minConnectorComplete { background: var(--color-brand-primary); }
 
 /* ─── Responsive (vertical) — small screens ──────────────────────────────── */
 

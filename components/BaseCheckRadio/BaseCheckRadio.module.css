@@ -52,8 +52,8 @@
 .radioDefault {
   width: 20px;
   height: 20px;
-  background: #FFFFFF;             /* Default Colors/White */
-  border: 1px solid #DCE5DE;       /* Default Colors/Border */
+  background: var(--color-white);             /* Default Colors/White */
+  border: 1px solid var(--color-border);       /* Default Colors/Border */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -74,8 +74,8 @@
 .radioChecked {
   width: 20px;
   height: 20px;
-  background: #E7DA10;             /* Brand/Tertiary/Base — amarelo Treeal */
-  border: 1px solid #203224;       /* Brand/Primary/Base — verde escuro */
+  background: var(--color-brand-tertiary);     /* Brand/Tertiary/Base — amarelo Treeal */
+  border: 1px solid var(--color-brand-primary); /* Brand/Primary/Base — verde escuro */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -117,7 +117,7 @@
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: #203224;             /* Brand/Primary/Base — contraste no fundo amarelo */
+  background: var(--color-brand-primary);      /* Brand/Primary/Base — contraste no fundo amarelo */
 }
 
 /* ─── Toggle ─────────────────────────────────────────────────────────────── */
@@ -128,8 +128,8 @@
   width: 36px;    /* w-[36px] from Figma */
   height: 20px;   /* h-[20px] from Figma */
   border-radius: 100px;
-  background: #9490AC;             /* Default Colors/Text medium — off state */
-  border: 1px solid #DCE5DE;
+  background: var(--color-text-medium);        /* Default Colors/Text medium — off state */
+  border: 1px solid var(--color-border);
   box-sizing: border-box;
   transition: background 0.2s ease, border-color 0.2s ease;
   box-shadow: 0 1px 2px rgba(16, 24, 40, 0.06), 0 1px 3px rgba(16, 24, 40, 0.10);
@@ -144,15 +144,15 @@
   width: 14px;
   height: 14px;
   border-radius: 50%;
-  background: #FFFFFF;
+  background: var(--color-white);
   transition: transform 0.2s ease;
   box-shadow: 0 1px 2px rgba(16, 24, 40, 0.06);
 }
 
 /* Checked state */
 .toggleChecked .toggleTrack {
-  background: #E7DA10;             /* Brand/Tertiary/Base — amarelo Treeal */
-  border-color: #203224;           /* Brand/Primary/Base — verde escuro */
+  background: var(--color-brand-tertiary);     /* Brand/Tertiary/Base — amarelo Treeal */
+  border-color: var(--color-brand-primary);    /* Brand/Primary/Base — verde escuro */
 }
 
 .toggleChecked .toggleTrack::after {

@@ -41,7 +41,7 @@
 /* ─── Container ──────────────────────────────────────────────────────────── */
 
 .modal {
-  background: #FFFFFF;
+  background: var(--color-white);
   border-radius: 16px 16px 0 0;
   width: 100%;
   max-width: 393px;
@@ -67,7 +67,7 @@
   display: flex;
   flex-direction: column;
   gap: 8px;
-  color: #524E69;
+  color: var(--color-text-dark);
   width: 100%;
 }
 
@@ -128,14 +128,14 @@
   flex: 1 1 0;
   min-height: 48px;
   padding: 6px 16px;
-  background: #203224;
+  background: var(--color-brand-primary);
   border: none;
   border-radius: 12px;
   font-family: 'Clash Grotesk', sans-serif;
   font-weight: 600;
   font-size: 16px;
   line-height: 1.5;
-  color: #FFFFFF;
+  color: var(--color-white);
   cursor: pointer;
   transition: opacity 0.15s ease;
   box-sizing: border-box;
@@ -150,14 +150,14 @@
   flex: 1 1 0;
   min-height: 48px;
   padding: 6px 16px;
-  background: #E7DA10;
+  background: var(--color-brand-tertiary);
   border: none;
   border-radius: 12px;
   font-family: 'Clash Grotesk', sans-serif;
   font-weight: 600;
   font-size: 16px;
   line-height: 1.5;
-  color: #203224;
+  color: var(--color-brand-primary);
   cursor: pointer;
   transition: opacity 0.15s ease;
   box-sizing: border-box;

@@ -27,8 +27,8 @@
   align-items: center;
   gap: 32px;
   padding: 8px 16px;
-  background: #FFFFFF;
-  border-bottom: 1px solid #DCE5DE;
+  background: var(--color-white);
+  border-bottom: 1px solid var(--color-border);
   width: 100%;
   box-sizing: border-box;
 }
@@ -52,7 +52,7 @@
   font-weight: 600;
   line-height: 1.25;
   letter-spacing: 0;
-  color: #524E69;
+  color: var(--color-text-dark);
   margin: 0;
   white-space: nowrap;
   overflow: hidden;
@@ -87,7 +87,7 @@
   display: flex;
   align-items: center;
   gap: 12px;
-  background: #F3F3F3;
+  background: var(--color-workspace-bg);
   border-radius: 6px;
   padding: 0 12px;
   height: 100%;
@@ -98,7 +98,7 @@
   transition: background 0.15s ease;
 }
 
-.workspace:hover { background: #EBEBEB; }
+.workspace:hover { background: var(--color-workspace-bg-hover); }
 
 /* Full-width version for MobileOpen */
 .workspaceFull {
@@ -119,7 +119,7 @@
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  background: #5BA980;
+  background: var(--color-status-dot);
   flex-shrink: 0;
 }
 
@@ -136,7 +136,7 @@
   font-weight: 600;
   font-size: 10px;
   line-height: 1.3;
-  color: #524E69;
+  color: var(--color-text-dark);
   white-space: nowrap;
   margin: 0;
 }
@@ -146,7 +146,7 @@
   font-weight: 600;
   font-size: 14px;
   line-height: 1.3;
-  color: #203224;
+  color: var(--color-brand-primary);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -160,7 +160,7 @@
   width: 16px;
   height: 16px;
   flex-shrink: 0;
-  color: #524E69;
+  color: var(--color-text-dark);
 }
 
 /* ─── Bell / notification button ─────────────────────────────────────────── */
@@ -176,7 +176,7 @@
   border: none;
   cursor: pointer;
   padding: 0;
-  color: #524E69;
+  color: var(--color-text-dark);
   flex-shrink: 0;
   transition: background 0.15s ease;
 }
@@ -198,7 +198,7 @@
   font-weight: 600;
   font-size: 16px;
   line-height: 1.3;
-  color: #203224;
+  color: var(--color-brand-primary);
   flex-shrink: 0;
   transition: background 0.15s ease;
 }
@@ -228,7 +228,7 @@
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  background: #0F6C13;
+  background: var(--color-brand-secondary);
   flex-shrink: 0;
   overflow: hidden;
   display: flex;
@@ -249,7 +249,7 @@
   font-family: 'Clash Grotesk', sans-serif;
   font-weight: 600;
   font-size: 13px;
-  color: #FFFFFF;
+  color: var(--color-white);
 }
 
 .userText {
@@ -264,7 +264,7 @@
   font-weight: 600;
   font-size: 14px;
   line-height: 1.43;
-  color: #203224;
+  color: var(--color-brand-primary);
   margin: 0;
 }
 
@@ -273,7 +273,7 @@
   font-weight: 600;
   font-size: 10px;
   line-height: 1.3;
-  color: #524E69;
+  color: var(--color-text-dark);
   margin: 0;
 }
 
@@ -286,14 +286,14 @@
   width: 100%;
   min-height: 36px;
   padding: 6px 12px;
-  background: #E7DA10;
+  background: var(--color-brand-tertiary);
   border: none;
   border-radius: 12px;
   font-family: 'Clash Grotesk', sans-serif;
   font-weight: 600;
   font-size: 16px;
   line-height: 1.5;
-  color: #203224;
+  color: var(--color-brand-primary);
   cursor: pointer;
   box-sizing: border-box;
   transition: opacity 0.15s ease;
